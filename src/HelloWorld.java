@@ -2,7 +2,7 @@ public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
         //1)below is my favorite number
-        int myFavoriteNumber = 7;
+        int myFavoriteNumber = 1738;
         System.out.println(myFavoriteNumber);
         //2)no we have an output for a string
         String myString = "good so far.";
@@ -59,21 +59,18 @@ public class HelloWorld {
 //        int three = (int) "three"; lang string cannot be converted
 
         //13)
-        int x = 4;
-        x += 5;
-
-        int x = 3;
-        int y = 4;
-        y *= x;
-
-        int x = 10;
-        int y = 2;
-        x /= y;
-        y -= x;
-
-
+//        int x = 4;
+//        x += 5;
+//
+//        int x = 3;
+//        int y = 4;
+//        y *= x;
+//
+//        int x = 10;
+//        int y = 2;
+//        x /= y;
+//        y -= x;
 
 
     }
 }
-
