@@ -6,6 +6,7 @@ public class ConsoleExercises {
         double pi = 3.14159;
         System.out.println("The value of pi is approximately " + pi + ".");
         Scanner scanner = new Scanner(System.in);
+
         System.out.print("Enter an integer: ");
         int num = scanner.nextInt();
         scanner.nextLine();
