@@ -9,14 +9,18 @@ public class Bob {
 
         if (input.endsWith("?")) {
             System.out.println("Sure.");
-        } else if (input.endWitrh("!")){
+        } else if (input.endsWith("!")){
             System.out.println("Whoa, chill out!");
-        }else if(input.endWitrh("")){
+        }else if(input.isEmpty()){
             System.out.println("'Fine. Be that way!");
         }else {
             System.out.println("Whatever.");
         }
+
     }
 }
 
-
+//    boolean endsWithSpace = input.endsWith(" ");
+//if (endsWithSpace) {
+//        System.out.println("Fine. Be that way!");
+//        }
