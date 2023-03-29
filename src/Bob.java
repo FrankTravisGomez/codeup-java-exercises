@@ -19,8 +19,3 @@ public class Bob {
 
     }
 }
-
-//    boolean endsWithSpace = input.endsWith(" ");
-//if (endsWithSpace) {
-//        System.out.println("Fine. Be that way!");
-//        }
