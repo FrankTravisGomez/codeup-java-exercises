@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class MethodsExercises {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         int a = 10, b = 5;
         System.out.println(addition(a, b));
         System.out.println(subtraction(a, b));
@@ -13,6 +13,7 @@ public class MethodsExercises {
         System.out.println(multiply(a, b));
         Scanner scanner = new Scanner(System.in);
         System.out.println(getInteger(5, 50, scanner));
+        System.out.println(factor(1, 10));
     }
 
     public static int addition(int a, int b) {
@@ -34,6 +35,7 @@ public class MethodsExercises {
         return a / b;
 
     }
+
     public static int modulus(int num1, int num2) {
         return num1 % num2;
     }
@@ -67,13 +69,38 @@ public class MethodsExercises {
         System.out.print("Enter a number between " + min + " and " + max + ":");
         int userInput = scanner.nextInt();
 
-            if (userInput >= min && userInput <= max) {
-                return userInput;
-            } else {
-                System.out.println("re enter a number");
-                return getInteger(min, max, scanner);
-            }
+        if (userInput >= min && userInput <= max) {
+            return userInput;
+        } else {
+            System.out.println("re enter a number");
+            return getInteger(min, max, scanner);
+        }
     }
 
-}
 
+    public static long factor(int min, int max) {
+        boolean calculate = true;
+        int number;
+        long factor = 1;
+        do {
+            System.out.print("Enter an integer between 1 and 10: ");
+            Scanner scanner = new Scanner(System.in);
+            number = scanner.nextInt();
+        } while (number < 1 || number > 10);
+
+        for (int i = 1; i <= number; i++) {
+            factor *= i;
+        }
+        System.out.println(number + "! = " + factor);
+
+        System.out.print("Do you want to continue? (yay or nay?): ");
+        Scanner scanner = new Scanner(System.in);
+        String continueResponse = scanner.next();
+        calculate = continueResponse.equalsIgnoreCase("yay");
+        if (calculate) {
+            return factor(min, max);
+        } else {
+            return factor;
+        }
+    }
+}
