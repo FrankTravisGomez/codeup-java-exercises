@@ -14,8 +14,9 @@ public class MethodsExercises {
         Scanner scanner = new Scanner(System.in);
         System.out.println(getInteger(5, 50, scanner));
         System.out.println(factor(1, 10));
+        DiceRoller.play();
     }
-
+//1)
     public static int addition(int a, int b) {
         return a + b;
     }
@@ -64,7 +65,7 @@ public class MethodsExercises {
         return num1 + multiply(num1, num2 - 1);
     }
 
-
+        //2)
     public static int getInteger(int min, int max, Scanner scanner) {
         System.out.print("Enter a number between " + min + " and " + max + ":");
         int userInput = scanner.nextInt();
@@ -77,7 +78,7 @@ public class MethodsExercises {
         }
     }
 
-
+        //3)
     public static long factor(int min, int max) {
         boolean calculate = true;
         int number;
@@ -101,6 +102,34 @@ public class MethodsExercises {
             return factor(min, max);
         } else {
             return factor;
+        }
+    }
+    //4)
+    public static class DiceRoller {
+        public static void play() {
+            Scanner scanner = new Scanner(System.in);
+            int numSides = sides(scanner);
+            do {
+                rollDice(numSides);
+            } while (rollAgain(scanner));
+            System.out.println("Thanks for playing!");
+        }
+
+        private static int sides(Scanner scanner) {
+            System.out.print("Enter the number of sides for a pair of dice: ");
+            return scanner.nextInt();
+        }
+
+        private static boolean rollAgain(Scanner scanner) {
+            System.out.print("roll again? (y/n): ");
+            String answer = scanner.next();
+            return answer.equalsIgnoreCase("y");
+        }
+
+        private static void rollDice(int numSides) {
+            int die1 = (int) (Math.random() * numSides) + 1;
+            int die2 = (int) (Math.random() * numSides) + 1;
+            System.out.println("You rolled a " + die1 + " and a " + die2);
         }
     }
 }
