@@ -1,22 +1,19 @@
 package shapes;
 
+import shapes.Measurable;
+import shapes.Rectangle;
+import shapes.Square;
+
 public class ShapesTest {
     public static void main(String[] args) {
+        Measurable myShape;
 
-        Rectangle box1 = new Rectangle(5, 4);
+        myShape = new Square(5.0);
+        System.out.println("Square area: " + myShape.getArea());
+        System.out.println("Square perimeter: " + myShape.getPerimeter());
 
-        double perimeter = box1.getPerimeter();
-        double area = box1.getArea();
-
-        System.out.println("perimeter of box1: " + perimeter);
-        System.out.println("area of box1: " + area);
-
-        Rectangle box2 = new Square(5);
-
-        double perimeter2 = box2.getPerimeter();
-        double area2 = box2.getArea();
-
-        System.out.println("perimeter of box1: " + perimeter2);
-        System.out.println("area of box1: " + area2);
+        myShape = new Rectangle(4.0, 6.0);
+        System.out.println("Rectangle area: " + myShape.getArea());
+        System.out.println("Rectangle perimeter: " + myShape.getPerimeter());
     }
 }
