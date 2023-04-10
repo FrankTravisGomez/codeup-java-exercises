@@ -87,6 +87,7 @@ public class Input {
     }
 
     public void promptUser() {
+
         System.out.print("Enter a string: ");
         String str = getString();
         System.out.println("You entered: " + str);

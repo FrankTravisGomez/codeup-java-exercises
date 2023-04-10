@@ -47,7 +47,14 @@ public class HelloWorld {
         System.out.println(++x);
         System.out.println(x); // this line of code starts at 6 because the placement of ++X
 
-        //11)
+//        11) has too many errors
+//
+//        public class Main {
+//            public static void main(String[] args) {
+//                String class = "Codeup";
+//                System.out.println(class);
+//            }
+//        }
 
         //12)
 //        String theNumberThree = "three";
@@ -70,6 +77,14 @@ public class HelloWorld {
 //        int y = 2;
 //        x /= y;
 //        y -= x;
+
+        //14)
+
+        int num = Integer.MAX_VALUE;
+        System.out.println(num);
+
+        num = num + 1;
+        System.out.println(num);
 
 
     }
